@@ -1,0 +1,252 @@
+.destination-details-page {
+  padding-bottom: 50px;
+}
+
+.destination-loading {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #aeb8cc;
+}
+
+.loading-icon {
+  animation: destinationSpin 1s linear infinite;
+}
+
+@keyframes destinationSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.destination-error {
+  margin-top: 30px;
+  padding: 30px;
+  background: #101a2b;
+  border: 1px solid #263650;
+  border-radius: 18px;
+  color: #fff;
+}
+
+.destination-hero {
+  min-height: 350px;
+  margin-top: 22px;
+  border-radius: 22px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.destination-hero-content {
+  padding: 45px;
+  max-width: 800px;
+}
+
+.destination-category {
+  display: inline-block;
+  padding: 7px 13px;
+  border-radius: 20px;
+  background: rgba(91, 73, 235, 0.9);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.destination-hero h1 {
+  margin: 15px 0 8px;
+  color: #fff;
+  font-size: 42px;
+}
+
+.destination-location {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #d5dced;
+  margin: 0;
+}
+
+.destination-content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.destination-main {
+  min-width: 0;
+}
+
+.destination-section {
+  background: #0d1727;
+  border: 1px solid #1d2a40;
+  border-radius: 18px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.destination-section h2 {
+  color: #fff;
+  margin: 0 0 15px;
+  font-size: 21px;
+}
+
+.destination-section p {
+  color: #aeb8cc;
+  line-height: 1.7;
+}
+
+.destination-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.destination-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 17px;
+  background: #111d30;
+  border: 1px solid #22314a;
+  border-radius: 14px;
+}
+
+.destination-info-card svg {
+  color: #7c6cff;
+  flex-shrink: 0;
+}
+
+.destination-info-card span {
+  display: block;
+  color: #8996ad;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.destination-info-card strong {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+}
+
+.destination-sidebar {
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+.destination-action-card {
+  background: linear-gradient(
+    145deg,
+    #121d39,
+    #0c1525
+  );
+  border: 1px solid #293a62;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.destination-action-card h3 {
+  color: #fff;
+  margin-top: 0;
+}
+
+.destination-action-card p {
+  color: #aeb8cc;
+  line-height: 1.6;
+}
+
+.destination-add-button,
+.maps-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 10px;
+  background: #5145e5;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.destination-add-button:hover,
+.maps-button:hover {
+  background: #6256f0;
+}
+
+.destination-map-card {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.map-placeholder {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(81,69,229,.20),
+      transparent 55%
+    ),
+    #091322;
+}
+
+.map-placeholder svg {
+  color: #7568ff;
+}
+
+.map-placeholder h3 {
+  color: #fff;
+  margin: 10px 0 4px;
+}
+
+.map-placeholder p {
+  margin: 0 0 18px;
+}
+
+.maps-button {
+  width: auto;
+}
+
+@media (max-width: 900px) {
+  .destination-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .destination-hero {
+    min-height: 280px;
+  }
+
+  .destination-hero-content {
+    padding: 25px;
+  }
+
+  .destination-hero h1 {
+    font-size: 30px;
+  }
+
+  .destination-info-grid {
+    grid-template-columns: 1fr;
+  }
+}

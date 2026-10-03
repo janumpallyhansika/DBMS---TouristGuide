@@ -1,0 +1,612 @@
+/* =========================================
+   CUSTOMIZE TRIP PAGE
+========================================= */
+
+.customize-page {
+  width: 100%;
+  max-width: 1100px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.customize-heading {
+  margin-bottom: 25px;
+}
+
+.customize-heading > span {
+  color: #818cf8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.customize-heading h1 {
+  color: var(--text-primary);
+  font-size: 30px;
+  margin-top: 6px;
+  line-height: 1.2;
+}
+
+.customize-heading p {
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.customize-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 20px;
+  align-items: start;
+}
+
+
+/* =========================================
+   FORM / PREVIEW CARDS
+========================================= */
+
+.customize-form,
+.customize-preview {
+  padding: 25px 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(79, 70, 229, 0.06),
+      rgba(13, 23, 38, 0.92)
+    );
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+
+/* =========================================
+   FORM HEADER
+========================================= */
+
+.customize-title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding-bottom: 22px;
+  margin-bottom: 25px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.customize-icon {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: rgba(99, 102, 241, 0.13);
+  color: #a5b4fc;
+}
+
+.customize-title h2 {
+  color: var(--text-primary);
+  font-size: 17px;
+  margin: 0;
+}
+
+.customize-title p {
+  color: var(--text-secondary);
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.customize-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin-bottom: 20px;
+}
+
+.customize-form-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: var(--text-primary);
+  font-size: 13px;
+}
+
+
+/* =========================================
+   SELECT DROPDOWNS
+========================================= */
+
+.customize-form select {
+  width: 100%;
+  min-height: 40px;
+
+  padding: 9px 12px;
+
+  background: #0d1726;
+  color: #f8fafc;
+
+  border: 1px solid #263449;
+  border-radius: 8px;
+
+  font-size: 13px;
+  outline: none;
+
+  color-scheme: dark;
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.customize-form select:hover {
+  border-color: #3b4b63;
+}
+
+.customize-form select:focus {
+  border-color: #6366f1;
+
+  box-shadow:
+    0 0 0 2px
+    rgba(99, 102, 241, 0.15);
+}
+
+.customize-form select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.customize-form select option {
+  background: #0d1726;
+  color: #f8fafc;
+}
+
+
+/* =========================================
+   PLACE SECTION
+========================================= */
+
+.custom-place-section {
+  margin-top: 25px;
+}
+
+.custom-place-section > label,
+.custom-place-section > div:first-child {
+  color: var(--text-primary);
+  font-size: 13px;
+}
+
+
+/* =========================================
+   PLACE LIST
+========================================= */
+
+.custom-place-list {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8px;
+
+  margin-top: 10px;
+}
+
+
+/* =========================================
+   PLACE BUTTON
+========================================= */
+
+.custom-place {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 11px 12px;
+
+  background: #0c1625;
+  color: var(--text-secondary);
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  font-size: 11px;
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.custom-place:hover {
+  border-color: #6366f1;
+  color: #a5b4fc;
+
+  transform: translateY(-1px);
+}
+
+.custom-place.selected {
+  border-color: #6366f1;
+
+  background:
+    rgba(79, 70, 229, 0.15);
+
+  color: #ffffff;
+
+  box-shadow:
+    0 0 0 1px
+    rgba(99, 102, 241, 0.08);
+}
+
+
+/* =========================================
+   GENERATE BUTTON
+========================================= */
+
+.custom-generate-button {
+  margin-top: 25px;
+
+  border: none;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4f46e5,
+      #6366f1
+    );
+
+  padding: 12px 18px;
+
+  border-radius: 9px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.custom-generate-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 25px
+    rgba(79, 70, 229, 0.3);
+}
+
+.custom-generate-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.custom-generate-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   PREVIEW HEADER
+========================================= */
+
+.preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.preview-header h3 {
+  color: var(--text-primary);
+  font-size: 14px;
+  margin: 0;
+}
+
+.preview-header span {
+  color: #a5b4fc;
+  font-size: 10px;
+}
+
+
+/* =========================================
+   EMPTY PREVIEW
+========================================= */
+
+.custom-empty {
+  min-height: 350px;
+
+  display: grid;
+  place-items: center;
+  align-content: center;
+
+  text-align: center;
+
+  color: var(--text-muted);
+}
+
+.custom-empty svg {
+  color: #64748b;
+}
+
+.custom-empty h3 {
+  color: var(--text-secondary);
+
+  font-size: 14px;
+
+  margin-top: 12px;
+}
+
+.custom-empty p {
+  max-width: 250px;
+
+  color: var(--text-muted);
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  margin-top: 5px;
+}
+
+
+/* =========================================
+   SELECTED PLACES
+========================================= */
+
+.selected-list {
+  margin-top: 18px;
+}
+
+.selected-place {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.selected-place:last-child {
+  border-bottom: none;
+}
+
+.selected-number {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background:
+    rgba(79, 70, 229, 0.15);
+
+  color: #a5b4fc;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 11px;
+}
+
+.selected-place strong,
+.selected-place span {
+  display: block;
+}
+
+.selected-place strong {
+  color: var(--text-primary);
+  font-size: 12px;
+}
+
+.selected-place span {
+  color: var(--text-muted);
+  font-size: 9px;
+  margin-top: 3px;
+}
+
+
+/* =========================================
+   GOOGLE MAPS BUTTON
+========================================= */
+
+.google-maps-custom-button {
+  width: 100%;
+
+  margin-top: 14px;
+
+  padding: 12px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border-radius: 9px;
+
+  border: 1px solid #4285f4;
+
+  background: transparent;
+
+  color: #8ab4f8;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.google-maps-custom-button:hover:not(:disabled) {
+  background: rgba(66, 133, 244, 0.12);
+
+  border-color: #8ab4f8;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px
+    rgba(66, 133, 244, 0.12);
+}
+
+.google-maps-custom-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.google-maps-custom-button:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.customize-error {
+  margin-top: 18px;
+
+  padding: 11px 13px;
+
+  border-radius: 8px;
+
+  background: rgba(239, 68, 68, 0.1);
+
+  border: 1px solid rgba(239, 68, 68, 0.25);
+
+  color: #fca5a5;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   SUCCESS MESSAGE
+========================================= */
+
+.customize-success {
+  margin-top: 18px;
+
+  padding: 11px 13px;
+
+  border-radius: 8px;
+
+  background: rgba(34, 197, 94, 0.08);
+
+  border: 1px solid rgba(34, 197, 94, 0.2);
+
+  color: #86efac;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .customize-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .customize-preview {
+    margin-top: 0;
+  }
+}
+
+
+@media (max-width: 800px) {
+
+  .customize-form,
+  .customize-preview {
+    padding: 20px;
+  }
+
+  .custom-place-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .customize-heading h1 {
+    font-size: 26px;
+  }
+
+  .customize-heading p {
+    font-size: 12px;
+  }
+
+  .customize-layout {
+    gap: 15px;
+  }
+
+  .customize-form,
+  .customize-preview {
+    padding: 18px;
+  }
+
+  .custom-place-list {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-generate-button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,43 @@
+/* =========================================
+   MAIN APPLICATION LAYOUT
+========================================= */
+
+.app {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+
+/* =========================================
+   MAIN PAGE CONTENT
+========================================= */
+
+.page-content {
+  margin-left: var(--sidebar-width);
+
+  padding-top: var(--navbar-height);
+
+  min-height: 100vh;
+
+  width: calc(100% - var(--sidebar-width));
+
+  background: var(--bg-primary);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+  .page-content {
+    margin-left: 0;
+
+    width: 100%;
+
+    padding-top: 70px;
+
+    padding-bottom: 70px;
+  }
+}

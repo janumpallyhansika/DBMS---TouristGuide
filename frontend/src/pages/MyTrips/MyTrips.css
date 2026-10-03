@@ -1,0 +1,455 @@
+/* =========================================
+   MY TRIPS PAGE
+========================================= */
+
+.my-trips-page {
+  width: 100%;
+  max-width: 1100px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.my-trips-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 25px;
+}
+
+.my-trips-heading > div > span {
+  color: #818cf8;
+
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.my-trips-heading h1 {
+  color: var(--text-primary);
+
+  font-size: 30px;
+
+  margin-top: 6px;
+
+  line-height: 1.2;
+}
+
+.my-trips-heading p {
+  color: var(--text-secondary);
+
+  font-size: 12px;
+
+  margin-top: 8px;
+}
+
+
+/* =========================================
+   NEW TRIP BUTTON
+========================================= */
+
+.my-trips-heading button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 10px 15px;
+
+  border: none;
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4f46e5,
+      #6366f1
+    );
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.my-trips-heading button:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 25px
+    rgba(79, 70, 229, 0.3);
+}
+
+.my-trips-heading button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   TRIPS LIST
+========================================= */
+
+.trips-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+
+  max-width: 900px;
+}
+
+
+/* =========================================
+   TRIP CARDS
+========================================= */
+
+.trips-list > * {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(79, 70, 229, 0.07),
+      rgba(13, 23, 38, 0.95)
+    );
+
+  border: 1px solid var(--border);
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.trips-list > *:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.trips-list > * h2,
+.trips-list > * h3 {
+  color: #ffffff;
+}
+
+.trips-list > * p {
+  color: var(--text-secondary);
+}
+
+
+/* =========================================
+   VIEW TRIP BUTTON
+========================================= */
+
+.trips-list button {
+  padding: 8px 14px;
+
+  border: 1px solid #6366f1;
+
+  border-radius: 8px;
+
+  background:
+    rgba(79, 70, 229, 0.12);
+
+  color: #a5b4fc;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.trips-list button:hover {
+  background:
+    rgba(79, 70, 229, 0.25);
+
+  border-color: #818cf8;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.trips-empty {
+  max-width: 900px;
+
+  min-height: 280px;
+
+  display: grid;
+
+  place-items: center;
+
+  align-content: center;
+
+  text-align: center;
+
+  padding: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(79, 70, 229, 0.06),
+      rgba(13, 23, 38, 0.92)
+    );
+
+  border: 1px solid var(--border);
+
+  border-radius: 14px;
+
+  color: var(--text-muted);
+}
+
+.trips-empty h3 {
+  color: var(--text-secondary);
+
+  font-size: 16px;
+
+  margin-top: 12px;
+}
+
+.trips-empty p {
+  max-width: 300px;
+
+  color: var(--text-muted);
+
+  font-size: 11px;
+
+  line-height: 1.6;
+
+  margin-top: 6px;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.trips-loading {
+  color: var(--text-secondary);
+
+  font-size: 13px;
+
+  padding: 25px 0;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.trips-error {
+  max-width: 900px;
+
+  margin-bottom: 18px;
+
+  padding: 11px 13px;
+
+  border-radius: 8px;
+
+  background:
+    rgba(239, 68, 68, 0.1);
+
+  border:
+    1px solid
+    rgba(239, 68, 68, 0.25);
+
+  color: #fca5a5;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .my-trips-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .my-trips-heading h1 {
+    font-size: 26px;
+  }
+
+  .my-trips-heading button {
+    width: 100%;
+  }
+
+  .trips-list {
+    max-width: 100%;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .my-trips-heading h1 {
+    font-size: 24px;
+  }
+
+  .my-trips-heading p {
+    font-size: 11px;
+  }
+}
+/* =========================================
+   DATABASE TRIP CARDS
+   ========================================= */
+
+.trip-db-card {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  margin-bottom: 16px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  overflow: hidden;
+}
+
+.trip-db-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.trip-db-card-content {
+  padding: 22px;
+}
+
+.trip-db-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.trip-db-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  opacity: 0.65;
+  margin-bottom: 7px;
+}
+
+.trip-db-card h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.trip-db-status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-transform: capitalize;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.trip-db-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.trip-db-info > div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.trip-db-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 22px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.trip-open-button {
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.trip-open-button:hover {
+  opacity: 0.7;
+}
+
+.spin {
+  animation: tripSpin 1s linear infinite;
+}
+
+@keyframes tripSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .trip-db-card-top {
+    flex-direction: column;
+  }
+
+  .trip-db-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .trip-db-card-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

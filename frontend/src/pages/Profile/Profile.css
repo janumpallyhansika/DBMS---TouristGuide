@@ -1,0 +1,351 @@
+/* =========================================
+   PROFILE PAGE
+========================================= */
+
+.profile-page {
+  width: 100%;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.profile-heading {
+  margin-bottom: 28px;
+}
+
+.profile-heading > span {
+  display: block;
+
+  color: #818cf8;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.profile-heading h1 {
+  margin-top: 6px;
+
+  color: white;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.profile-heading p {
+  margin-top: 6px;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+/* =========================================
+   PROFILE LAYOUT
+========================================= */
+
+.profile-layout {
+  display: grid;
+
+  grid-template-columns: 280px minmax(0, 1fr);
+
+  gap: 20px;
+
+  width: 100%;
+  max-width: 950px;
+}
+
+/* =========================================
+   PROFILE CARDS
+========================================= */
+
+.profile-card,
+.settings-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18, 30, 48, 0.95),
+      rgba(10, 19, 32, 0.98)
+    );
+
+  border: 1px solid var(--border);
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================
+   PROFILE CARD
+========================================= */
+
+.profile-card {
+  padding: 30px 24px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 300px;
+}
+
+.large-avatar {
+  width: 82px;
+  height: 82px;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4f46e5,
+      #ec4899
+    );
+
+  color: white;
+
+  font-size: 28px;
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 30px rgba(99, 102, 241, 0.22);
+}
+
+.profile-card h2 {
+  color: white;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  margin: 0;
+}
+
+.profile-card p {
+  color: var(--text-secondary);
+
+  font-size: 11px;
+
+  margin: 5px 0 20px;
+}
+
+/* =========================================
+   EDIT PROFILE BUTTON
+   Overrides the old white secondary-button
+========================================= */
+
+.profile-card .secondary-button {
+  width: 100%;
+  max-width: 150px;
+
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(129, 140, 248, 0.3);
+
+  border-radius: 8px;
+
+  background:
+    rgba(99, 102, 241, 0.12);
+
+  color: #a5b4fc;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.profile-card .secondary-button:hover {
+  background:
+    rgba(99, 102, 241, 0.2);
+
+  border-color: #6366f1;
+
+  color: white;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(79, 70, 229, 0.15);
+}
+
+/* =========================================
+   SETTINGS CARD
+========================================= */
+
+.settings-card {
+  padding: 25px 28px;
+}
+
+.settings-card h3 {
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  margin: 0 0 12px;
+}
+
+/* =========================================
+   PROFILE FIELD
+========================================= */
+
+.profile-field {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  min-height: 68px;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid var(--border);
+
+  color: #818cf8;
+}
+
+.profile-field:last-child {
+  border-bottom: none;
+}
+
+.profile-field > svg {
+  flex-shrink: 0;
+
+  color: #818cf8;
+
+  stroke-width: 1.8;
+}
+
+.profile-field div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  min-width: 0;
+}
+
+.profile-field span {
+  color: #64748b;
+
+  font-size: 9px;
+
+  line-height: 1.2;
+}
+
+.profile-field strong {
+  color: #f8fafc;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  word-break: break-word;
+}
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+.profile-field {
+  transition: background 0.2s ease;
+}
+
+.profile-field:hover {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(99, 102, 241, 0.035),
+      transparent
+    );
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+
+  .profile-layout {
+    grid-template-columns: 1fr;
+
+    max-width: 650px;
+  }
+
+  .profile-card {
+    min-height: auto;
+
+    padding: 25px;
+  }
+
+  .profile-card .secondary-button {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .profile-heading {
+    margin-bottom: 22px;
+  }
+
+  .profile-heading h1 {
+    font-size: 25px;
+  }
+
+  .profile-layout {
+    gap: 15px;
+  }
+
+  .settings-card {
+    padding: 20px;
+  }
+
+  .profile-field {
+    min-height: 62px;
+
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .profile-heading h1 {
+    font-size: 23px;
+  }
+
+  .profile-heading p {
+    font-size: 11px;
+  }
+
+  .profile-card {
+    padding: 22px 18px;
+  }
+
+  .settings-card {
+    padding: 18px;
+  }
+}

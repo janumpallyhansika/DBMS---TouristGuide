@@ -1,0 +1,28 @@
+.large-search {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 8px 0 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text-muted);
+}
+
+.large-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+}
+
+.large-search button {
+  border: none;
+  background: var(--primary);
+  color: white;
+  padding: 10px 17px;
+  border-radius: 8px;
+  font-weight: 600;
+}

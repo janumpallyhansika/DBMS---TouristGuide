@@ -1,0 +1,182 @@
+.place-card {
+  background: #0d1728;
+  border: 1px solid #1d2a40;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.place-card:hover {
+  transform: translateY(-4px);
+  border-color: #5146e5;
+}
+
+/* IMAGE */
+
+.place-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 225px;
+  background: linear-gradient(
+    135deg,
+    #18243a,
+    #101a2c
+  );
+  overflow: hidden;
+}
+
+.place-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* FALLBACK */
+
+.place-image-fallback {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(88, 72, 220, 0.35),
+      transparent 45%
+    ),
+    linear-gradient(
+      135deg,
+      #111d32,
+      #182640
+    );
+
+  color: #aeb9d0;
+}
+
+.place-image-fallback svg {
+  color: #7567ff;
+}
+
+.place-image-fallback span {
+  font-size: 14px;
+  color: #8d9ab3;
+}
+
+/* HEART */
+
+.place-heart {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  background: rgba(5, 10, 20, 0.72);
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+}
+
+.place-heart:hover {
+  background: #5146e5;
+}
+
+/* CONTENT */
+
+.place-content {
+  padding: 16px;
+}
+
+.place-category {
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  border-radius: 6px;
+
+  background: rgba(81, 70, 229, 0.15);
+
+  color: #8f84ff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  margin-bottom: 9px;
+}
+
+.place-content h3 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.place-content p {
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #9eabc2;
+
+  font-size: 14px;
+}
+
+.place-bottom {
+  margin-top: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.place-bottom span {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.place-bottom button {
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #17243a;
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.place-bottom button:hover {
+  background: #5146e5;
+}

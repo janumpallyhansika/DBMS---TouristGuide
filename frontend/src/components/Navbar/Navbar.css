@@ -1,0 +1,134 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-width);
+  right: 0;
+  height: var(--navbar-height);
+  background: rgba(7, 13, 24, 0.9);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--border);
+  z-index: 90;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+}
+
+.navbar-search {
+  width: min(500px, 55%);
+  height: 40px;
+  background: #0d1726;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 13px;
+
+  color: var(--text-muted);
+}
+
+.navbar-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 12px;
+}
+
+.navbar-search input::placeholder {
+  color: #64748b;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.notification-button {
+  position: relative;
+  background: transparent;
+  color: var(--text-secondary);
+  border: none;
+}
+
+.notification-button span {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 15px;
+  height: 15px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ef4444;
+  color: white;
+  font-size: 8px;
+}
+
+.profile-mini {
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: white;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #ec4899
+  );
+  font-weight: 700;
+}
+
+.profile-mini-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.profile-mini-info strong {
+  font-size: 11px;
+}
+
+.profile-mini-info small {
+  color: var(--text-muted);
+  font-size: 9px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .navbar {
+    left: 0;
+    height: 70px;
+    padding: 0 15px;
+  }
+
+  .mobile-menu {
+    display: block;
+    color: var(--text-secondary);
+  }
+
+  .navbar-search {
+    width: 55%;
+  }
+
+  .profile-mini-info {
+    display: none;
+  }
+}

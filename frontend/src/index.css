@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  min-height: 100%;
+
+  background: #070d18;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+  background: #070d18;
+
+  color: #f8fafc;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   GLOBAL VARIABLES
+========================================= */
+
+:root {
+  --sidebar-width: 290px;
+
+  --navbar-height: 90px;
+
+  --bg-primary: #070d18;
+
+  --bg-secondary: #091321;
+
+  --card: #0d1726;
+
+  --border: #1e2b3f;
+
+  --text-primary: #f8fafc;
+
+  --text-secondary: #cbd5e1;
+
+  --text-muted: #64748b;
+
+  --primary: #4f46e5;
+
+  --purple: #8b5cf6;
+
+  --transition: 0.2s ease;
+
+  --shadow-primary:
+    0 10px 25px rgba(79, 70, 229, 0.25);
+}
+
+
+/* =========================================
+   REMOVE DEFAULT BROWSER SPACING
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+
+/* =========================================
+   GLOBAL SELECT STYLE
+========================================= */
+
+select {
+  color-scheme: dark;
+}
+
+
+/* =========================================
+   LINKS
+========================================= */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
